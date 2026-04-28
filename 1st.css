@@ -115,6 +115,44 @@ strong {
     color: #2ecc71; /* Use that green from your home page to stay consistent */
 }
 
+
+/* This makes the form look like a real form */
+.contact-section {
+    padding: 60px 10%;
+    background-color: #fcfcfc;
+    text-align: center;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column; /* Stacks elements vertically */
+    max-width: 600px;
+    margin: 30px auto;
+    gap: 15px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.contact-form button {
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+}
 /* Container for all badges */
 .skills-container {
     display: flex;
@@ -206,6 +244,25 @@ strong {
 .service-card:hover {
     transform: translateY(-10px);
     border-color: #4CAF50;
+}
+
+.top-header {
+    background-color: white;
+    margin: 20px auto;       /* Adds space around the pill */
+    padding: 10px 40px;
+    width: 90%;              /* Adjust width as needed */
+    max-width: 1200px;
+    border-radius: 100px;    /* This creates the rounded 'pill' shape */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Adds a soft shadow */
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 .tool img {
@@ -333,37 +390,53 @@ h2 {
 
 /* contact section */
 /* Contact Section Layout */
+/* Restores the Contact Form Layout */
 .contact-form {
     display: flex;
-    flex-direction: column; /* Stacks elements vertically */
-    gap: 15px;              /* Adds space between inputs */
-    max-width: 500px;       /* Keeps the form from stretching too wide */
-    margin-top: 20px;
-}
-
-.input-group {
-    display: flex;
-    gap: 10px;              /* Puts Name and Email side-by-side */
+    flex-direction: column; /* Stacks Name, Email, and Message vertically */
+    gap: 20px;              /* Adds space between every row */
+    max-width: 600px;       /* Centers the form slightly */
+    margin: 20px 0;
 }
 
 .contact-form input, 
 .contact-form textarea {
+    width: 100%;
     padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%;            /* Makes them fill the container */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
 }
 
 .contact-form button {
-    padding: 12px;
-    background-color: #333; /* Or your brand color */
+    background-color: #000;
     color: white;
+    padding: 12px 25px;
     border: none;
+    border-radius: 8px;
     cursor: pointer;
-    border-radius: 5px;
-    align-self: flex-start; /* Keeps button from stretching full width */
+    width: fit-content;
 }
 
+.contact-form button:hover {
+    background-color: #333;
+}
+
+
+
+/* service wala webpage ko  */
+.service-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #666;
+    padding: 0 10px;
+}
+
+.service-card h3 {
+    color: #222;
+    margin-top: 15px;
+    font-size: 1.4rem;
+}
 /* Button Styling */
 .btn-send {
     background: #2ecc71; /* Match your home page green */
