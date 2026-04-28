@@ -12,33 +12,36 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
+/* main body ho yo chai  */
+body { 
     background-color: #ffffff;
     color: #333;
     line-height: 1.6;
-    padding-top: 80px; /* Space for fixed nav */
+    padding-top: 100px; /* Space for fixed nav */
 }
 
 /* 2. Navigation - Floating & Blurry */
+/* mathi top wala white section ho yo  */
 nav {
     position: fixed;
     top: 10px;
     left: 5%;
     right: 5%;
-    height: 70px;
+    height: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 30px;
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(15px);
-    border-radius: 50px;
+    border-radius: 90px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     z-index: 1000;
 }
 
+/* this is for MA logo section */
 .logo {
-    background-color: #4CAF50;
+    background-color: #23b46b;
     height: 45px;
     width: 45px;
     display: flex;
@@ -49,16 +52,17 @@ nav {
     font-weight: bold;
 }
 
+
 .menu {
     display: flex;
-    gap: 25px;
+    gap: 35px;
 }
 
 .menu a {
     text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    transition: 0.3s;
+    color: #080808;
+    font-weight: 700;
+    transition: 0.1s;
 }
 
 .menu a:hover {
@@ -71,11 +75,15 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 60px 10%;
-    min-height: 80vh;
+    min-height: 70vh;
+    background: radial-gradient(circle at top right, #b6b9bb, #ffffff);
+
 }
 
+
+
 .hero-content h1 {
-    font-size: 3.5rem;
+    font-size: 5.5rem;
     line-height: 1.2;
 }
 
@@ -83,7 +91,7 @@ nav {
     color: #4CAF50;
 }
 
-.hero-image img {
+/* .hero-image img {
     width: 100%;
     max-width: 400px;
     border-radius: 30px;
@@ -93,6 +101,59 @@ nav {
 
 .hero-image img:hover {
     transform: translateY(-10px) rotate(2deg);
+} */
+
+.about-container {
+    max-width: 900px;
+    margin: 50px auto; 
+    padding: 20px;
+    line-height: 1.8; 
+    font-family: 'Poppins', sans-serif;
+}
+
+strong {
+    color: #2ecc71; /* Use that green from your home page to stay consistent */
+}
+
+/* Container for all badges */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Individual Badge Styling */
+.skill-card {
+    display: flex;
+    align-items: center;
+    background: #f4f4f4;
+    padding: 10px 20px;
+    border-radius: 50px; /* Makes it look like a pill/badge */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    background: #e8f5e9; /* Light green tint */
+}
+
+.skill-card img {
+    width: 25px;
+    margin-right: 10px;
+}
+
+/* The "Learning" status tag */
+.status-tag {
+    font-size: 10px;
+    background: #2ecc71;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-left: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 
@@ -100,16 +161,22 @@ nav {
 .banner {
     width: 300px;        /* Smaller width for the container */
     height: 300px;       /* Fixed height */
-    margin: 20px auto;   /* Centers the image */
+    margin: 40px auto;   /* Centers the image */
     overflow: hidden;    /* Keeps the image inside the box */
-    border-radius: 50%;  /* Makes it a circle, or use 20px for rounded corners */
+    border-radius: 80%;  /* Makes it a circle, or use 20px for rounded corners */
     border: 5px solid whitesmoke;
+    
 }
 
 .banner img {
     width: 100%;
     height: 100%;
     object-fit: cover;   /* Ensures the photo fits perfectly without stretching */
+    display: block;
+    margin: 0 auto;
+   flex-direction: column;
+   box-shadow: 0 10px 25px rgba(166, 26, 26, 0.05);
+   /* animation: alternate infitine .5s buttonanimate; */
 }
 
 /* 4. Specialized & Toolkit Sections */
@@ -224,6 +291,94 @@ nav {
     background: #4CAF50;
     border-color: #4CAF50;
 }
+
+
+@keyframes buttonanimate
+ {
+    from{
+        transform: rotate(0deg);
+
+    }
+    to{
+        transform: rotate(45deg) 
+    }
+    
+}
+
+
+/* about me wala section */
+
+.about-me p {
+    margin-bottom: 25px; /* Adjust this number to increase/decrease the gap */
+}
+
+.skills-section h2 {
+    margin-top: 40px; /* This ensures there is a nice clear gap before the toolkit starts */
+}
+
+
+p {
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+/* contact section */
+/* Contact Section Layout */
+.contact-container {
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+/* Form Styling */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Spacing between boxes */
+    margin-top: 30px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* Button Styling */
+.btn-send {
+    background: #2ecc71; /* Match your home page green */
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-send:hover {
+    background: #27ae60;
+    transform: scale(1.02);
+}
+
+
+
+
+
+
 
 /* 6. RESPONSIVENESS (The "Media Queries") */
 @media (max-width: 900px) {
