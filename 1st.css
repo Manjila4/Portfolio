@@ -91,7 +91,7 @@ nav {
     color: #4CAF50;
 }
 
-/* .hero-image img {
+.hero-image img {
     width: 100%;
     max-width: 400px;
     border-radius: 30px;
@@ -101,7 +101,7 @@ nav {
 
 .hero-image img:hover {
     transform: translateY(-10px) rotate(2deg);
-} */
+}
 
 .about-container {
     max-width: 900px;
@@ -333,28 +333,35 @@ h2 {
 
 /* contact section */
 /* Contact Section Layout */
-.contact-container {
-    max-width: 600px;
-    margin: 50px auto;
-    text-align: center;
-}
-
-/* Form Styling */
 .contact-form {
     display: flex;
-    flex-direction: column;
-    gap: 15px; /* Spacing between boxes */
-    margin-top: 30px;
+    flex-direction: column; /* Stacks elements vertically */
+    gap: 15px;              /* Adds space between inputs */
+    max-width: 500px;       /* Keeps the form from stretching too wide */
+    margin-top: 20px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;              /* Puts Name and Email side-by-side */
 }
 
 .contact-form input, 
 .contact-form textarea {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-family: inherit;
-    background: rgba(255, 255, 255, 0.8);
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;            /* Makes them fill the container */
+}
+
+.contact-form button {
+    padding: 12px;
+    background-color: #333; /* Or your brand color */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    align-self: flex-start; /* Keeps button from stretching full width */
 }
 
 /* Button Styling */
